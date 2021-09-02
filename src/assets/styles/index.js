@@ -596,7 +596,7 @@ export const Basketpage = styled.div`
     margin-left: 20px;
     width: 20%;
     height: 212px;
-    margin-top: -90px;
+    /* margin-top: -90px; */
   }
 
   .price-title {
