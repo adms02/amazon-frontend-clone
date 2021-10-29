@@ -12,16 +12,14 @@ import { Helmet } from "react-helmet-async";
 function Orderspage() {
   const [page, setPage] = useState(1);
 
-  const { data, isSuccess, isLoading, isError, error, isPreviousData } = useQuery(
-    ["getOrders", page],
-    () => api.getOrders(page),
-    {
-      keepPreviousData: true,
-      staleTime: 20 * 1000,
-    }
-  );
+  const { data, isSuccess, isLoading, isError, error, isPreviousData } = useQuery(["getOrders", page], () => api.getOrders(page), {
+    keepPreviousData: true,
+    staleTime: 20 * 1000,
+  });
 
   if (isLoading) console.log("loading");
+
+  console.log(data);
 
   if (isError) console.log(error);
 

@@ -158,46 +158,38 @@ S.Signuppage = styled.div`
     margin-bottom: 22px;
     padding: 25px 27px;
   }
-
   .signup-box-inner h1 {
     font-size: 28px;
     font-weight: 400;
     line-height: 34px;
     margin-bottom: 12px;
   }
-
   .login-form-container {
     display: flex;
     flex-direction: column;
   }
-
   .retro-btn {
     border-color: #adb1b8 #a2a6ac #8d9096;
     background: linear-gradient(to bottom, #f5d78e, #eeb933);
   }
-
   .message {
     margin-top: 20px;
   }
-
   .message p {
     color: #111111;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
   }
-
   .bottom-label {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 18px;
   }
-
   .bottom-label p {
     font-size: 13px;
   }
-
   .divider-container {
     text-align: center;
     position: relative;
@@ -206,7 +198,6 @@ S.Signuppage = styled.div`
     margin-bottom: 14px;
     line-height: 0;
   }
-
   .divider-container::after {
     content: "";
     width: 100%;
@@ -219,7 +210,6 @@ S.Signuppage = styled.div`
     margin-top: -1px;
     z-index: 1;
   }
-
   .divider-container p {
     line-height: 1;
     font-size: 12px;
@@ -231,7 +221,6 @@ S.Signuppage = styled.div`
     background-color: #fff;
     padding: 0 8px 0 7px;
   }
-
   .create-acc-btn {
     background: #f0f1f4;
   }
