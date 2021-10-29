@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import SubHeader from "../components/SubHeader";
 import styled from "styled-components";
@@ -9,8 +9,16 @@ import { useQuery } from "react-query";
 import * as api from "../api";
 import MobileSearchBar from "../components/MobileSearchBar";
 import { Helmet } from "react-helmet-async";
+import InfoModal from "../components/InfoModal";
 
 function Homepage() {
+  const [isOpen, setOpen] = useState(() => {
+    if (localStorage.getItem("disclaimer")) {
+      return false;
+    }
+    return true;
+  });
+
   const { data, isLoading, isError, error } = useQuery("getAllProducts", api.getAllProducts, {
     staleTime: 60 * 2000,
   });
@@ -22,7 +30,7 @@ function Homepage() {
   return (
     <>
       <Helmet title="Amazon: Low Prices in Electronics, Books, Sports & more" />
-
+      <InfoModal isOpen={isOpen} setOpen={setOpen} />
       <Header />
       <MobileSearchBar />
       <SubHeader />
