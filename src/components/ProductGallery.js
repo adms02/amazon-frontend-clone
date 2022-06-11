@@ -39,7 +39,6 @@ S.ProductGallery = styled.div`
       top: 0;
       left: 0;
       object-fit: contain;
-      /* object-position: center center; */
       width: 100%;
       height: 100%;
     }
@@ -58,23 +57,8 @@ S.ProductGallery = styled.div`
     box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
   }
 
-  .image-gallery-thumbnails-container {
-    /* width: 1000px; */
-  }
-
-  .image-gallery-thumbnail {
-  }
-
-  /* width: auto; */
-  /* object-fit: scale-down; */
-  /* width: 50%; */
-
   @media ${device.laptop} {
     padding: 0 20px;
     margin-bottom: 20px;
   }
 `;
-
-// S.Thumbnail = styled.div`
-//   border: 1px solid black;
-// `;

@@ -539,9 +539,6 @@ export const Background = styled.div`
  */
 
 export const Basketpage = styled.div`
-  /* max-width: 1500px;
-  margin: 0 auto; */
-
   .adbanner {
     margin-top: 14px;
     margin-bottom: 16px;

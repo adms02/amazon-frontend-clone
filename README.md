@@ -39,7 +39,13 @@ This frontend has a number of technologies involved, including:
 - Axios
 - Stripe API
 
-I've hosted the frontend with AWS, running on an EC2 Ubuntu instance.
+Intially I hosted this with AWS, running on an EC2 Ubuntu instance.
+This site was shortly removed by Amazon for obvious reasons.
+
+I added a disclaimer to make it clear that this isn't a phising website, and
+have also changed the logo around slightly.
+
+I've moved the frontend to firebase and the backend to HeroKu.
 
 ## What's next for this project?
 

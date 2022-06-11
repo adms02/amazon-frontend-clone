@@ -21,7 +21,7 @@ export const recaptchaSlice = createSlice({
 export const { addAttempt } = recaptchaSlice.actions;
 export const { clearAttempts } = recaptchaSlice.actions;
 
-// Selectors - This is how we pull information from the Global store slice
+// Selectors
 
 export const getAttempts = (state) => state.recaptcha.attempts;
 

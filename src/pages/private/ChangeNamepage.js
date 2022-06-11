@@ -16,7 +16,7 @@ import { useQueryClient } from "react-query";
 import { Helmet } from "react-helmet-async";
 
 function ChangeNamepage() {
-  const { mutate, data, error, isError, isSuccess } = useMutation((val) => api.updateCustomerName(val));
+  const { mutate, isSuccess } = useMutation((val) => api.updateCustomerName(val));
 
   const queryClient = useQueryClient();
   const dispatch = useDispatch();
@@ -116,7 +116,6 @@ S.ChangeNamepage = styled.div`
   }
   .change-name-header h1 {
     margin-top: 27px;
-    /* margin-bottom: 20px; */
     font-size: 28px;
     line-height: 36px;
     font-weight: 400;

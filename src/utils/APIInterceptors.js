@@ -3,7 +3,6 @@ import { api } from "../api";
 import { useDispatch } from "react-redux";
 import { logoutHandler } from "../slices/userSlice";
 import { setErrorNotification } from "../../src/slices/notificationSlice";
-import { deleteAllNotifications } from "../../src/slices/notificationSlice";
 
 function APIInterceptors() {
   const dispatch = useDispatch();
@@ -21,12 +20,10 @@ function APIInterceptors() {
           config.headers.Authorization = `Bearer ${token}`;
         }
       }
-      // dispatch(deleteAllNotifications);
 
       return config;
     },
     (error) => {
-      // dispatch(deleteAllNotifications);
       return Promise.reject(error);
     }
   );
@@ -38,8 +35,6 @@ function APIInterceptors() {
 
   api.interceptors.response.use(
     function (response) {
-      // Any status code that lie within the range of 2xx cause this function to trigger
-      // Do something with response data
       return response;
     },
     function (error) {

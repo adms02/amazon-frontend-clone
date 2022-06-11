@@ -2,30 +2,6 @@ import { getProduct } from "../api";
 import { useEffect, useRef } from "react";
 
 /**
- *  Helper that checks if product exists by product ID
- *  Returns true if exists or false
- */
-
-export const checkUrlProductExists = async (params) => {
-  const productId = params.productId;
-  const result = await getProducts(productId);
-
-  let isValid = false;
-
-  for (let val of result) {
-    if (val.id == productId) {
-      isValid = true;
-
-      break;
-    } else {
-      continue;
-    }
-  }
-
-  return isValid;
-};
-
-/**
  *  Helper that closes dropdown if user clicks outside dropdown field
  */
 

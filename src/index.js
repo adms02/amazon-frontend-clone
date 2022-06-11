@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
@@ -37,4 +37,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-// https://stackoverflow.com/questions/64306989/cannot-update-during-an-existing-state-transition-such-as-within-render-ren

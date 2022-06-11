@@ -6,7 +6,6 @@ const initialState = {
   lastname: "",
   email: "",
   isLoggedIn: false,
-  // isLoggedIn: localStorage.getItem("token") ? true : false,
   token: localStorage.getItem("token") === null ? "" : `Bearer ${localStorage.getItem("token")}`,
 };
 
@@ -44,10 +43,9 @@ export const { loginHandler } = userSlice.actions;
 export const { logoutHandler } = userSlice.actions;
 export const { updateCustomer } = userSlice.actions;
 
-// Selectors - This is how we pull information from the Global store slice
+// Selectors
 
 export const getUser = (state) => state.user;
-
 export const getToken = (state) => state.user.token;
 export const getIsLoggedIn = (state) => state.user.isLoggedIn;
 

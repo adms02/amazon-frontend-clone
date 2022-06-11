@@ -8,8 +8,7 @@ import { useMutation } from "react-query";
 import * as api from "../api";
 import { useParams } from "react-router";
 import { requestResetPasswordSchema } from "../schemas/schemas";
-import { useDispatch } from "react-redux";
-import { setSuccessNotification } from "../slices/notificationSlice";
+
 import { Helmet } from "react-helmet-async";
 
 function ResetPasswordpage() {
@@ -17,8 +16,6 @@ function ResetPasswordpage() {
   const { mutate, data, error, isError, isSuccess } = useMutation((val) => api.checkResetPassTokenValid(val));
 
   const setNewPassword = useMutation((val) => api.setNewPassword(val));
-
-  const dispatch = useDispatch();
 
   useEffect(() => {
     mutate({ token });
@@ -29,7 +26,6 @@ function ResetPasswordpage() {
   }
 
   if (isSuccess) {
-    // dispatch(setSuccessNotification(""));
     //TODO Cleanup Notification system
     return <Redirect to="/ap/signin" />;
   }
