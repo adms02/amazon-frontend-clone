@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import amazon_logo from "../assets/images/amazon_uk_logo.svg";
+import light_logo from "../assets/images/light_logo.svg";
 import SearchIcon from "../assets/images/search_icon.svg";
 import DownIcon from "../assets/images/downarrow_icon.svg";
 import locationflagicon from "../assets/images/location-flag-icon.svg";
@@ -27,7 +27,7 @@ function Header() {
 
         <div className="logo">
           <Link to="/">
-            <img src={amazon_logo} alt="Amazon Logo" />
+            <img src={light_logo} alt="Nrazon Logo" />
           </Link>
         </div>
 

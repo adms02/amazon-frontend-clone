@@ -103,7 +103,7 @@ function Buybox({ id, mainimg, title, price, category, quantity }) {
 
         <div className="delivey-notice">
           <p>
-            Sold by <span className="highlight">Pamila EU</span> and <span className="highlight">Fulfilled by Amazon</span>{" "}
+            Sold by <span className="highlight">Pamila EU</span> and <span className="highlight">Fulfilled by Nrazon</span>{" "}
           </p>
         </div>
 

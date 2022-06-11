@@ -12,7 +12,7 @@ function AccountShortcuts() {
 
           <ul>
             <li>
-              <Link>Amazon Drive</Link>
+              <Link>Nrazon Drive</Link>
             </li>
             <li>
               <Link>Apps and more</Link>
@@ -65,13 +65,13 @@ function AccountShortcuts() {
               <Link>Your purchase preferences</Link>
             </li>
             <li>
-              <Link>Amazon money store</Link>
+              <Link>Nrazon money store</Link>
             </li>
             <li>
-              <Link>Amazon Pay</Link>
+              <Link>Nrazon Pay</Link>
             </li>
             <li>
-              <Link>Amazon Coins</Link>
+              <Link>Nrazon Coins</Link>
             </li>
             <li>
               <Link>Coupons</Link>
@@ -91,7 +91,7 @@ function AccountShortcuts() {
               <Link>Your transactions</Link>
             </li>
             <li>
-              <Link>Amazon currency converter</Link>
+              <Link>Nrazon currency converter</Link>
             </li>
             <li>
               <Link>Change Currency Settings</Link>
@@ -119,19 +119,19 @@ function AccountShortcuts() {
               <Link>Account linking</Link>
             </li>
             <li>
-              <Link>Amazon Business registration</Link>
+              <Link>Nrazon Business registration</Link>
             </li>
             <li>
-              <Link>Sell on Amazon</Link>
+              <Link>Sell on Nrazon</Link>
             </li>
             <li>
-              <Link>Amazon Web Services</Link>
+              <Link>Nrazon Web Services</Link>
             </li>
             <li>
               <Link>Audible membership</Link>
             </li>
             <li>
-              <Link>Login with Amazon</Link>
+              <Link>Login with Nrazon</Link>
             </li>
             <li>
               <Link>Twitch account settings</Link>
@@ -147,10 +147,10 @@ function AccountShortcuts() {
               <Link>Manage your profiles</Link>
             </li>
             <li>
-              <Link>Amazon Business registration</Link>
+              <Link>Nrazon Business registration</Link>
             </li>
             <li>
-              <Link>Amazon Household</Link>
+              <Link>Nrazon Household</Link>
             </li>
             <li>
               <Link>Your virtual Dash Buttons</Link>
@@ -159,7 +159,7 @@ function AccountShortcuts() {
               <Link>Subscribe & Save</Link>
             </li>
             <li>
-              <Link>Manage Amazon Family Settings</Link>
+              <Link>Manage Nrazon Family Settings</Link>
             </li>
           </ul>
         </div>

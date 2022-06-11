@@ -29,8 +29,6 @@ function ProductCard({ id, title, price, category, images, rating }) {
     dispatch(addToBasket(product));
 
     history.push(`/gp/huc/${id}`);
-
-    //redirect user to new item page
   };
 
   return (

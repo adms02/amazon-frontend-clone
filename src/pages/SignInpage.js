@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-// import { Helmet } from "react-helmet";
+import React from "react";
 import styled from "styled-components";
-import * as Yup from "yup";
 import { Formik, Form, Field } from "formik";
 import { Link, Redirect } from "react-router-dom";
 import warning_icon from "../assets/images/warning-icon.svg";
@@ -11,7 +9,6 @@ import * as api from "../api";
 import { useDispatch, useSelector } from "react-redux";
 import { loginHandler } from "../slices/userSlice";
 import { useHistory } from "react-router-dom";
-import { device } from "../assets/styles/breakpoints";
 import queryString from "query-string";
 import { loginSchema } from "../schemas/schemas";
 import { Helmet } from "react-helmet-async";
@@ -35,7 +32,7 @@ function SignInpage() {
   if (isSuccess) {
     console.log(`signinpage success`);
     dispatch(loginHandler(data));
-    return <Redirect to="/" />;
+    return <Redirect to={redirectUrl} />;
   }
 
   const submitHandler = ({ email, password }) => {
@@ -48,7 +45,7 @@ function SignInpage() {
 
   return (
     <>
-      <Helmet title="Amazon Sign In" />
+      <Helmet title="Sign In" />
 
       <AuthContainer showError={isError} errorMessage={isError ? error.response.data.error : null}>
         <S.Signuppage>
@@ -88,8 +85,6 @@ function SignInpage() {
                           </div>
                         ) : null}
 
-                        {/* {failedAttempts === 3 && <p>Hiiiii</p>} */}
-
                         <div className="bottom-label">
                           <label htmlFor="Password" className="retro-label">
                             Password
@@ -125,13 +120,12 @@ function SignInpage() {
                       <span className="link">Privacy Notice</span>, our <span className="link">Cookies Notice</span> and our{" "}
                       <span className="link">Interest-Based Ads Notice</span>.
                     </p>
-                    {/* <button onClick={() => dispatch(addAttempt())}>adwdawd</button> */}
                   </div>
                 </div>
               </div>
 
               <div className="divider-container">
-                <p>New to Amazon?</p>
+                <p>New to Nrazon?</p>
               </div>
 
               <Link to={redirectUrl ? `/ap/register?redirectUrl=${redirectUrl}` : `/ap/register`}>

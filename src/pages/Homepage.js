@@ -29,7 +29,7 @@ function Homepage() {
 
   return (
     <>
-      <Helmet title="Amazon: Low Prices in Electronics, Books, Sports & more" />
+      <Helmet title="NotRealAmazon: Low Prices in Electronics, Books, Sports & more" />
       <InfoModal isOpen={isOpen} setOpen={setOpen} />
       <Header />
       <MobileSearchBar />

@@ -33,7 +33,7 @@ function ChangeEmailpage() {
 
   return (
     <AuthContainer>
-      <Helmet title="Amazon Change E-mail" />
+      <Helmet title="Change E-mail" />
 
       <S.ChangeEmailpage>
         <div className="change-email-box">

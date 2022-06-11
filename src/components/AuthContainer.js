@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AuthFooter from "./AuthFooter";
-import amazon_dark_logo from "../assets/images/amazon_dark_logo.svg";
+import dark_logo from "../assets/images/nrazon_dark_logo.svg";
 import warning_box_icon from "../assets/images/warning_box_icon.svg";
 import { device } from "../assets/styles/breakpoints";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ function AuthContainer({ children, showError, errorMessage, showSuccess, success
       <div className="auth-container">
         <div className="logo">
           <Link to="/">
-            <img src={amazon_dark_logo} alt="" />
+            <img src={dark_logo} alt="" />
           </Link>
         </div>
         {/* 

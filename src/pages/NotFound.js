@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async";
 function NotFound() {
   return (
     <>
-      <Helmet title="Amazon Page Not Found" />
+      <Helmet title="Page Not Found" />
 
       <Header />
       <MobileSearchBar />
@@ -27,7 +27,7 @@ function NotFound() {
             <p>
               Try searching or go to{" "}
               <span className="cta-link">
-                <Link to="/">Amazon's home page.</Link>
+                <Link to="/">Nrazon's home page.</Link>
               </span>
             </p>
           </div>

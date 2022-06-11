@@ -129,6 +129,7 @@ const GlobalStyle = createGlobalStyle`
       font-weight: 700;
     }
 
+ 
 
     .formErrors {
     margin-top: 3px;

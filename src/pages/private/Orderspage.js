@@ -19,8 +19,6 @@ function Orderspage() {
 
   if (isLoading) console.log("loading");
 
-  console.log(data);
-
   if (isError) console.log(error);
 
   const breadcrumbs = [

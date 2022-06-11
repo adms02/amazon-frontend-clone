@@ -96,7 +96,7 @@ const menuItems = {
   messagecentre: {
     icon: "https://images-na.ssl-images-amazon.com/images/G/02/x-locale/cs/help/images/gateway/self-service/YA_icon_Message_3._CB657827121_.png",
     title: "Message Centre",
-    description: "View your Amazon and Marketplace Seller Messages",
+    description: "View your Nrazon and Marketplace Seller Messages",
     link: "",
   },
   help: {
@@ -107,8 +107,8 @@ const menuItems = {
   },
   amazonmobile: {
     icon: "https://images-na.ssl-images-amazon.com/images/G/02/x-locale/cs/ya/images/amazon_app._CB423622050_.png",
-    title: "Amazon Mobile App",
-    description: "Download the Amazon App",
+    title: "Nrazon Mobile App",
+    description: "Download the Nrazon App",
     link: "",
   },
 };

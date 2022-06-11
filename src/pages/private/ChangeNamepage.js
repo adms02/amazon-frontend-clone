@@ -42,7 +42,7 @@ function ChangeNamepage() {
 
   return (
     <>
-      <Helmet title="Amazon Change Name" />
+      <Helmet title="Change Name" />
 
       <Header />
       <SubHeader />
@@ -56,8 +56,8 @@ function ChangeNamepage() {
 
         <div className="change-name-container">
           <span className="description">
-            If you want to change the name associated with your Amazon customer account, you may do so below. Make sure that you
-            click the <span className="bold">Save Changes</span> button when you have finished.
+            If you want to change the name associated with your Nrazon customer account, you may do so below. Make sure that you click the{" "}
+            <span className="bold">Save Changes</span> button when you have finished.
           </span>
 
           <Formik

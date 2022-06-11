@@ -15,7 +15,7 @@ function NewItempage() {
 
   return (
     <>
-      <Helmet title="Amazon Shopping Basket" />
+      <Helmet title="Shopping Basket" />
 
       <Header />
       <MobileSearchBar />

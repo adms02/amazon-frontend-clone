@@ -9,7 +9,7 @@ function MobileSearchBar() {
       <div className="search-bar-container">
         <form action="" className="search-bar">
           <div className="search-field">
-            <input type="text" placeholder="Search Amazon.co.uk" />
+            <input type="text" placeholder="Search Notrealamazon.co.uk" />
 
             <div className="nav-right">
               <button type="submit">

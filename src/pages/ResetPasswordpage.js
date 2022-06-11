@@ -40,7 +40,7 @@ function ResetPasswordpage() {
 
   return (
     <AuthContainer>
-      <Helmet title="Amazon Reset Password" />
+      <Helmet title="Reset Password" />
 
       <S.ResetPasswordpage>
         <div className="resetpass-box">
@@ -84,9 +84,7 @@ function ResetPasswordpage() {
                     name="confirmpassword"
                     type="confirmpassword"
                     placeholder=""
-                    className={
-                      errors.confirmpassword && touched.confirmpassword ? "retro-input retro-input-error" : "retro-input"
-                    }
+                    className={errors.confirmpassword && touched.confirmpassword ? "retro-input retro-input-error" : "retro-input"}
                     autoComplete="on"
                   />
                   {errors.confirmpassword && touched.confirmpassword ? (
@@ -110,8 +108,8 @@ function ResetPasswordpage() {
             <li>Use at least 6 characters, a combination of numbers and letters at best.</li>
             <li>Do not use the same password you have used with us previously.</li>
             <li>
-              Do not use dictionary words, your name, e-mail address, mobile phone number or other personal information that can
-              be easily obtained.
+              Do not use dictionary words, your name, e-mail address, mobile phone number or other personal information that can be easily
+              obtained.
             </li>
             <li>Do not use the same password for multiple online accounts.</li>
           </ul>

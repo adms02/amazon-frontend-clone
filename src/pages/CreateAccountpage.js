@@ -40,7 +40,7 @@ function CreateAccountpage() {
 
   return (
     <>
-      <Helmet title="Amazon Registration" />
+      <Helmet title="NotRealAmazon Registration" />
 
       <AuthContainer showError={isError} errorMessage={isError ? error.response.data.error : null}>
         <S.CreateAccountpage>

@@ -2,7 +2,6 @@ import React from "react";
 // import { Helmet } from "react-helmet";
 import { Formik, Form, Field } from "formik";
 import styled from "styled-components";
-import amazon_dark_logo from "../assets/images/amazon_dark_logo.svg";
 import warning_icon from "../assets/images/warning-icon.svg";
 import { useMutation } from "react-query";
 import * as api from "../api";
@@ -30,7 +29,7 @@ function ForgotPasswordpage() {
 
   return (
     <>
-      <Helmet title="Amazon Password Assistance" />
+      <Helmet title="Password Assistance" />
 
       <AuthContainer showError={isError} errorMessage={isError ? error.response.data.error : null}>
         <S.ForgotPasswordPage>

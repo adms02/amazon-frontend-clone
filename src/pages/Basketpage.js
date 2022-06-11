@@ -14,88 +14,47 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useMutation } from "react-query";
 import * as api from "../api";
 import { useHistory, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
-import { Helmet } from "react-helmet-async";
-
 function Basketpage() {
+  const { mutate, data, isSuccess } = useMutation((val) => api.checkoutSession(val));
+
   const user = useSelector(getUser);
   const items = useSelector(selectItems);
   const dispatch = useDispatch();
   let history = useHistory();
   let { pathname } = useLocation();
 
-  const { mutate, data, error, isError, isSuccess, isLoading } = useMutation((val) => api.checkoutSession(val));
+  const subtotal = items.reduce((acc, curr) => acc + curr.price * curr.quantity, 0).toFixed(2);
+  const quantityOfItems = items.reduce((acc, curr) => acc + curr.quantity, 0);
 
-  const updateQuantityHandler = (id, _quantity) => {
-    let quantity;
-    typeof _quantity === "string" ? (quantity = 0) : (quantity = _quantity);
-    dispatch(updateQuantity({ id, quantity }));
+  const updateQuantityHandler = (id, _quantity = 0) => {
+    dispatch(updateQuantity({ id, _quantity }));
   };
 
   const removeItemHandler = (id) => {
     dispatch(removeFromBasket(id));
   };
 
-  const combinedItems = items.reduce((acc, curr, index) => {
-    const firstIndex = acc.findIndex((item) => item.id === curr.id);
-
-    if (firstIndex === -1) {
-      // console.log(`no found item`);
-      acc.push({
-        mainimg: curr.mainimg,
-        title: curr.title,
-        id: curr.id,
-        price: Number(curr.price),
-        quantity: Number(curr.quantity),
-      });
-    } else {
-      // console.log(`merging`);
-      if (acc[firstIndex] !== undefined) {
-        acc[firstIndex].quantity += Number(curr.quantity);
-      }
-    }
-    return acc;
-  }, []);
-
-  const subtotal = combinedItems.reduce((acc, curr) => acc + curr.price * curr.quantity, 0).toFixed(2);
-  const quantityOfItems = combinedItems.reduce((acc, curr) => acc + curr.quantity, 0);
-
   const startCheckoutHandler = async () => {
     if (user.isLoggedIn === false) {
       history.push(`/ap/signin?redirectUrl=${pathname}`);
     } else {
       const email = user.email;
-      const line_items = Object.assign(combinedItems);
-
-      for (const [k, v] of Object.entries(line_items)) {
-        delete line_items[k].mainimg;
-        delete line_items[k].title;
-        delete line_items[k].price;
-      }
-      mutate({ line_items, email });
+      mutate({ items, email });
     }
   };
 
   const createSession = async () => {
-    const stripe = await stripePromise;
-
-    await stripe.redirectToCheckout({
-      sessionId: data.id,
-    });
+    await stripePromise.redirectToCheckout({ sessionId: data.id });
   };
 
-  if (isSuccess) {
-    createSession();
-  }
-
-  if (isError) {
-    console.log(error);
-  }
+  if (isSuccess) createSession();
 
   return (
     <>
-      <Helmet title="Amazon Shopping Basket" />
+      <Helmet title="NotRealAmazon Shopping Basket" />
 
       <S.Background>
         <Header />
@@ -120,7 +79,7 @@ function Basketpage() {
                 </div>
 
                 <div className="item-container">
-                  {combinedItems.map((x) => (
+                  {items.map((x) => (
                     <BasketItem
                       key={x.id}
                       id={x.id}

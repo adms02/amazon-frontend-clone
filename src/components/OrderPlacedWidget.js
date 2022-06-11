@@ -29,11 +29,11 @@ function OrderPlacedWidget() {
         {/* <div className="right">
           <div className="right-ad">
             <span className="ad-header">
-              Do you purchase online for work? Register for a FREE Amazon Business account to access features including
+              Do you purchase online for work? Register for a FREE Business account to access features including
               downloadable VAT invoices, business-only prices, bulk savings and more.
             </span>
 
-            <Link>Go to Amazon Business</Link>
+    
           </div>
         </div> */}
       </div>

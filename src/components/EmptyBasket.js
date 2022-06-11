@@ -16,7 +16,7 @@ function EmptyBasket() {
       <img src={kettle_img} alt="" />
 
       <div className="basket-msg">
-        <p>Your Amazon basket is empty</p>
+        <p>Your basket is empty</p>
 
         {!isLoggedIn && (
           <div className="basket-btns">

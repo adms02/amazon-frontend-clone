@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Currency from "react-currency-formatter";
 import dataFormat from "dateformat";
 import reorder_icon from "../../assets/images/reorder_icon.png";
-import { device } from "../../assets/styles/breakpoints";
 
 function OrderCard({ amount_shipping, amount_total, created_at, payment_id, products }) {
   const created_at_Formatted = dataFormat(created_at, "ddS mmmm yyyy");
@@ -17,18 +16,13 @@ function OrderCard({ amount_shipping, amount_total, created_at, payment_id, prod
             <p className="order-title">ORDER PLACED</p>
             <p className="order-desc">{created_at_Formatted}</p>
           </div>
-
+          <div className="title">test</div>
           <div className="total">
             <p className="order-title">TOTAL</p>
             <p className="order-desc">
               <Currency quantity={Number(amount_total)} currency="GBP" />
             </p>
           </div>
-
-          {/* <div className="recipient">
-            <p className="order-title">DISPATCH TO</p>
-            <p className="order-desc">Daniel Adams</p>
-          </div> */}
         </div>
 
         <div className="top-right">

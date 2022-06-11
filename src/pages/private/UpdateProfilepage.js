@@ -29,7 +29,7 @@ function UpdateProfilepage() {
 
   return (
     <>
-      <Helmet title="Amazon Change Name, E-mail, Password" />
+      <Helmet title="Change Name, E-mail, Password" />
 
       <Header />
       <SubHeader />

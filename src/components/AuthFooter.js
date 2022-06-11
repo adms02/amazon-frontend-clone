@@ -10,12 +10,12 @@ function AuthFooter() {
 
       <div className="footer-list">
         <div className="item">
-          <a href="https://www.amazon.co.uk/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&nodeId=1040616">
+          <a href="">
             <p>Conditions of Use</p>
           </a>
         </div>
         <div className="item">
-          <a href="https://www.amazon.co.uk/gp/help/customer/display.html/ref=ap_desktop_footer_privacy_notice?ie=UTF8&nodeId=502584">
+          <a href="">
             <p>Privacy Notice</p>
           </a>
         </div>
